@@ -17,6 +17,11 @@ export default function TextForm(props) {
     }
     const [text,setText] = useState('Enter text here');
 
+    const handleClear= ()=>{
+        let newText= '';
+        setText(newText);
+    }
+
     return (
         <>
         <div className='container'>
@@ -25,6 +30,7 @@ export default function TextForm(props) {
                 <textarea className="form-control" value={text} onChange= {handleOnChange} id="myBox" rows="8"></textarea>
                 <button className="btn btn-primary my-3" onClick={handleUpClick}>Convert to Uppercase</button>
                 <button className="btn btn-primary my-3 mx-2" onClick={handleDownClick}>Convert to Lowercase</button>
+                <button className="btn btn-primary my-3 mx-2" onClick={handleClear}>Clear</button>
             </div>
         </div>
         <div className="container my-2">
