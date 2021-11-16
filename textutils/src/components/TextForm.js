@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
 export default function TextForm(props) {
+    const [text,setText] = useState('Enter text here');
 
     const handleUpClick= ()=>{
         let newText= text.toUpperCase();
@@ -15,7 +16,7 @@ export default function TextForm(props) {
         let newText= text.toLowerCase();
         setText(newText);
     }
-    const [text,setText] = useState('Enter text here');
+    
 
     const handleClear= ()=>{
         let newText= '';
