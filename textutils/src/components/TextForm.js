@@ -23,6 +23,8 @@ export default function TextForm(props) {
         setText(newText);
     }
 
+
+    
     return (
         <>
         <div className='container'>
